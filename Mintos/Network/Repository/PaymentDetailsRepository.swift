@@ -8,7 +8,7 @@
 import Foundation
 
 protocol PaymentDetailsRepositoryProtocol {
-    func getPaymentDetails() async throws -> PaymentDetails
+    @MainActor func getPaymentDetails() async throws -> PaymentDetails
 }
 
 final class PaymentDetailsRepository: PaymentDetailsRepositoryProtocol {
@@ -19,7 +19,7 @@ final class PaymentDetailsRepository: PaymentDetailsRepositoryProtocol {
         self.service = service
     }
     
-    func getPaymentDetails() async throws -> PaymentDetails {
+    @MainActor func getPaymentDetails() async throws -> PaymentDetails {
         let request = PaymentDetailsRequest()
         let data = try await service.get(request: request)
         return try JSONDecoder().decode(PaymentDetails.self, from: data, keyPath: "response")

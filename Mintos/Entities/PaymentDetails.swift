@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct PaymentDetails: Codable {
+struct PaymentDetails: Codable, Equatable {
     let paymentDetails: String?
     let items: [Item]?
 }
 
 // MARK: - Item
-struct Item: Codable, Identifiable {
+struct Item: Codable, Identifiable, Equatable {
     var id: String { iban ?? "" }
     let bank: String?
     let swift: String?

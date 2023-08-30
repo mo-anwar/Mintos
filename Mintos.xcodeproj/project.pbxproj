@@ -26,7 +26,20 @@
 		9E512AE62A9FBFD700BF40A0 /* PaymentDetailsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E512AE52A9FBFD700BF40A0 /* PaymentDetailsEndPoint.swift */; };
 		9EA4CDB22A9FC2AD00F1E39F /* SceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA4CDB12A9FC2AD00F1E39F /* SceneFactory.swift */; };
 		9EA4CDB42A9FCBE100F1E39F /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA4CDB32A9FCBE100F1E39F /* View.swift */; };
+		9EA4CDBE2A9FE0C400F1E39F /* MintosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA4CDBD2A9FE0C400F1E39F /* MintosTests.swift */; };
+		9EA4CDC62A9FE0F500F1E39F /* CombineTestExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 9EA4CDC52A9FE0F500F1E39F /* CombineTestExtensions */; };
+		9EA4CDC82A9FE12200F1E39F /* PaymentDetailsRepositoryStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA4CDC72A9FE12200F1E39F /* PaymentDetailsRepositoryStub.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9EA4CDBF2A9FE0C400F1E39F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9E512AA42A9FB98B00BF40A0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9E512AAB2A9FB98B00BF40A0;
+			remoteInfo = Mintos;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		9E512AAC2A9FB98B00BF40A0 /* Mintos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mintos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +62,9 @@
 		9E512AE52A9FBFD700BF40A0 /* PaymentDetailsEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDetailsEndPoint.swift; sourceTree = "<group>"; };
 		9EA4CDB12A9FC2AD00F1E39F /* SceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneFactory.swift; sourceTree = "<group>"; };
 		9EA4CDB32A9FCBE100F1E39F /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		9EA4CDBB2A9FE0C400F1E39F /* MintosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MintosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EA4CDBD2A9FE0C400F1E39F /* MintosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MintosTests.swift; sourceTree = "<group>"; };
+		9EA4CDC72A9FE12200F1E39F /* PaymentDetailsRepositoryStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentDetailsRepositoryStub.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +75,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9EA4CDB82A9FE0C400F1E39F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EA4CDC62A9FE0F500F1E39F /* CombineTestExtensions in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -66,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				9E512AAE2A9FB98B00BF40A0 /* Mintos */,
+				9EA4CDBC2A9FE0C400F1E39F /* MintosTests */,
 				9E512AAD2A9FB98B00BF40A0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				9E512AAC2A9FB98B00BF40A0 /* Mintos.app */,
+				9EA4CDBB2A9FE0C400F1E39F /* MintosTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -248,6 +274,15 @@
 			path = SceneFactory;
 			sourceTree = "<group>";
 		};
+		9EA4CDBC2A9FE0C400F1E39F /* MintosTests */ = {
+			isa = PBXGroup;
+			children = (
+				9EA4CDBD2A9FE0C400F1E39F /* MintosTests.swift */,
+				9EA4CDC72A9FE12200F1E39F /* PaymentDetailsRepositoryStub.swift */,
+			);
+			path = MintosTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -268,6 +303,27 @@
 			productReference = 9E512AAC2A9FB98B00BF40A0 /* Mintos.app */;
 			productType = "com.apple.product-type.application";
 		};
+		9EA4CDBA2A9FE0C400F1E39F /* MintosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9EA4CDC32A9FE0C400F1E39F /* Build configuration list for PBXNativeTarget "MintosTests" */;
+			buildPhases = (
+				9EA4CDB72A9FE0C400F1E39F /* Sources */,
+				9EA4CDB82A9FE0C400F1E39F /* Frameworks */,
+				9EA4CDB92A9FE0C400F1E39F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9EA4CDC02A9FE0C400F1E39F /* PBXTargetDependency */,
+			);
+			name = MintosTests;
+			packageProductDependencies = (
+				9EA4CDC52A9FE0F500F1E39F /* CombineTestExtensions */,
+			);
+			productName = MintosTests;
+			productReference = 9EA4CDBB2A9FE0C400F1E39F /* MintosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -281,6 +337,10 @@
 					9E512AAB2A9FB98B00BF40A0 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
+					9EA4CDBA2A9FE0C400F1E39F = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 9E512AAB2A9FB98B00BF40A0;
+					};
 				};
 			};
 			buildConfigurationList = 9E512AA72A9FB98B00BF40A0 /* Build configuration list for PBXProject "Mintos" */;
@@ -292,11 +352,15 @@
 				Base,
 			);
 			mainGroup = 9E512AA32A9FB98B00BF40A0;
+			packageReferences = (
+				9EA4CDC42A9FE0F500F1E39F /* XCRemoteSwiftPackageReference "CombineTestExtensions" */,
+			);
 			productRefGroup = 9E512AAD2A9FB98B00BF40A0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				9E512AAB2A9FB98B00BF40A0 /* Mintos */,
+				9EA4CDBA2A9FE0C400F1E39F /* MintosTests */,
 			);
 		};
 /* End PBXProject section */
@@ -308,6 +372,13 @@
 			files = (
 				9E512AB72A9FB98D00BF40A0 /* Preview Assets.xcassets in Resources */,
 				9E512AB42A9FB98D00BF40A0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EA4CDB92A9FE0C400F1E39F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,7 +409,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9EA4CDB72A9FE0C400F1E39F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EA4CDC82A9FE12200F1E39F /* PaymentDetailsRepositoryStub.swift in Sources */,
+				9EA4CDBE2A9FE0C400F1E39F /* MintosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9EA4CDC02A9FE0C400F1E39F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9E512AAB2A9FB98B00BF40A0 /* Mintos */;
+			targetProxy = 9EA4CDBF2A9FE0C400F1E39F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		9E512AB82A9FB98D00BF40A0 /* Debug */ = {
@@ -511,6 +599,40 @@
 			};
 			name = Release;
 		};
+		9EA4CDC12A9FE0C400F1E39F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Mintos.MintosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mintos.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mintos";
+			};
+			name = Debug;
+		};
+		9EA4CDC22A9FE0C400F1E39F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Mintos.MintosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mintos.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mintos";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -532,7 +654,35 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		9EA4CDC32A9FE0C400F1E39F /* Build configuration list for PBXNativeTarget "MintosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EA4CDC12A9FE0C400F1E39F /* Debug */,
+				9EA4CDC22A9FE0C400F1E39F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9EA4CDC42A9FE0F500F1E39F /* XCRemoteSwiftPackageReference "CombineTestExtensions" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/industrialbinaries/CombineTestExtensions";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9EA4CDC52A9FE0F500F1E39F /* CombineTestExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9EA4CDC42A9FE0F500F1E39F /* XCRemoteSwiftPackageReference "CombineTestExtensions" */;
+			productName = CombineTestExtensions;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9E512AA42A9FB98B00BF40A0 /* Project object */;
 }
