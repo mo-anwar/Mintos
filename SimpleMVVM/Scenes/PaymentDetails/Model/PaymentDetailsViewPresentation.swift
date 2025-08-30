@@ -1,10 +1,3 @@
-//
-//  PaymentDetailsViewPresentation.swift
-//  SimpleMVVM
-//
-//  Created by Mohamed anwar on 30/08/2023.
-//
-
 import Foundation
 
 enum ViewState: Equatable {
@@ -17,7 +10,7 @@ extension PaymentDetailsView {
     struct Presentation {
         var title: String
         var list: [AccountView.Presentation]
-        var error: String?
+        var error: ErrorView.Presentation?
         var viewState: ViewState
     }
 }
@@ -33,6 +26,8 @@ extension PaymentDetailsView.Presentation: AnimatablePresentation {
 
 extension PaymentDetailsView.Presentation: Hashable { }
 
+extension PaymentDetailsView.Presentation: Sendable { }
+
 extension PaymentDetailsView.Presentation {
     var shouldHideError: Bool {
         error == nil
@@ -44,6 +39,10 @@ extension PaymentDetailsView.Presentation {
     
     var shouldHideLoading: Bool {
         !isLoading
+    }
+    
+    var shouldHideContent: Bool {
+        isLoading || error != nil
     }
 }
 

@@ -16,6 +16,8 @@ extension AccountView.Presentation: Identifiable { }
 
 extension AccountView.Presentation: Hashable { }
 
+extension AccountView.Presentation: Sendable { }
+
 extension AccountView.Presentation {
     init(_ item: Item) {
         self.id = item.id ?? UUID().uuidString

@@ -1,10 +1,3 @@
-//
-//  PaymentDetailsView.swift
-//  SimpleMVVM
-//
-//  Created by Mohamed anwar on 30/08/2023.
-//
-
 import SwiftUI
 import Combine
 
@@ -29,15 +22,11 @@ struct PaymentDetailsView: View {
                 .ignoresSafeArea()
             
             VStack {
-                if presentation.isLoading {
-                    ProgressView("Loading...")
-                        .progressViewStyle(CircularProgressViewStyle())
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                } else if let error = presentation.error {
-                    makeErrorView()
-                } else {
-                    makeContentView()
-                }
+                makeProgressView()
+                
+                makeErrorView()
+                
+                makeContentView()
             }
         }
         .onAppear {
@@ -57,6 +46,7 @@ struct PaymentDetailsView: View {
             }
             .scrollIndicators(.hidden)
         }
+        .isHidden(presentation.shouldHideContent, remove: true)
     }
     
     // MARK: - Header
@@ -77,38 +67,19 @@ struct PaymentDetailsView: View {
     }
     
     // MARK: - Error View
+    @ViewBuilder
     private func makeErrorView() -> some View {
-        VStack(spacing: 16) {
-            Image(systemName: "exclamationmark.triangle")
-                .font(.system(size: 48))
-                .foregroundColor(.orange)
-            
-            Text("Error")
-                .font(.headline)
-                .fontWeight(.semibold)
-            
-            Text(presentation.error ?? "An error occurred")
-                .font(.body)
-                .multilineTextAlignment(.center)
-                .foregroundColor(.secondary)
-                .padding(.horizontal)
-            
-            Button("Try Again") {
-                input.viewDidLoadTrigger.send()
-            }
-            .buttonStyle(.borderedProminent)
-            .controlSize(.large)
+        if let error = presentation.error {
+            ErrorView(presentation: error)
+                .isHidden(presentation.shouldHideError, remove: true)
         }
-        .padding(.all, 24)
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color(.systemGroupedBackground))
     }
     
     // MARK: - ProgressView
     private func makeProgressView() -> some View {
-        ProgressView()
-            .progressViewStyle(.circular)
-            .frame(width: 25, height: 25)
+        ProgressView("Loading...")
+            .progressViewStyle(CircularProgressViewStyle())
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
             .isHidden(presentation.shouldHideLoading, remove: true)
     }
     

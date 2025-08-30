@@ -1,10 +1,3 @@
-//
-//  PaymentDetailsViewModel.swift
-//  SimpleMVVM
-//
-//  Created by Mohamed anwar on 30/08/2023.
-//
-
 import Foundation
 import Combine
 
@@ -81,14 +74,18 @@ extension PaymentDetailsViewModel {
                 output.presentation = PaymentDetailsView.Presentation(
                     title: "",
                     list: [],
-                    error: serviceError.errorDescription,
+                    error: .init(error: serviceError.errorDescription, onRetry: {
+                        print("Retry")
+                    }),
                     viewState: .error
                 )
             } catch {
                 output.presentation = PaymentDetailsView.Presentation(
                     title: "",
                     list: [],
-                    error: "Failed to load payment details. Please try again.",
+                    error: .init(error: error.localizedDescription, onRetry: {
+                        print("Retry")
+                    }),
                     viewState: .error
                 )
             }
