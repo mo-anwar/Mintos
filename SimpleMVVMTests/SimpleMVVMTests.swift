@@ -1,10 +1,3 @@
-//
-//  SimpleMVVMTests.swift
-//  SimpleMVVMTests
-//
-//  Created by Mohamed anwar on 30/08/2023.
-//
-
 import Testing
 import Combine
 @testable import SimpleMVVM
@@ -85,7 +78,7 @@ struct PaymentDetailsViewModelTests {
         #expect(viewModel.output.presentation.title == "")
         #expect(viewModel.output.presentation.list.isEmpty)
         #expect(viewModel.output.presentation.viewState == .error)
-        #expect(viewModel.output.presentation.error == nil)
+        #expect(viewModel.output.presentation.error == ErrorView.Presentation(error: ServiceError.noData.errorDescription, onRetry: { }))
     }
     
     @Test("Loading state during fetch")
