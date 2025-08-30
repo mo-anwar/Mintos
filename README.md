@@ -172,9 +172,8 @@ This project demonstrates a simple MVVM architecture implementation in iOS.
 ## 👨‍💻 Author
 
 **Mohamed Anwar**
-- Email: [Your Email]
-- LinkedIn: [Your LinkedIn]
-- GitHub: [Your GitHub]
+- Email: mohamedanwar18295@gmail.com
+- LinkedIn: [[LinkedIn]](https://www.linkedin.com/in/mohamed-anwar-aa0575b1/)
 
 ---
 
