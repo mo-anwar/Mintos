@@ -30,6 +30,8 @@
 		9EEA35E92E61BA6000D703DB /* AccountViewPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA35E62E61BA6000D703DB /* AccountViewPresentation.swift */; };
 		9EEA35EA2E61BA6000D703DB /* PaymentDetailsViewPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA35E72E61BA6000D703DB /* PaymentDetailsViewPresentation.swift */; };
 		9EEA3E4F2E624CF400D703DB /* AnimatablePresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA3E4E2E624CF400D703DB /* AnimatablePresentation.swift */; };
+		9EEA3E5B2E6311E000D703DB /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA3E5A2E6311E000D703DB /* ErrorView.swift */; };
+		9EEA3E5D2E63122000D703DB /* ErrorViewPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA3E5C2E63122000D703DB /* ErrorViewPresentation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		9EEA35E62E61BA6000D703DB /* AccountViewPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewPresentation.swift; sourceTree = "<group>"; };
 		9EEA35E72E61BA6000D703DB /* PaymentDetailsViewPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDetailsViewPresentation.swift; sourceTree = "<group>"; };
 		9EEA3E4E2E624CF400D703DB /* AnimatablePresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatablePresentation.swift; sourceTree = "<group>"; };
+		9EEA3E5A2E6311E000D703DB /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		9EEA3E5C2E63122000D703DB /* ErrorViewPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewPresentation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				9E512AB12A9FB98B00BF40A0 /* PaymentDetailsView.swift */,
+				9EEA3E5A2E6311E000D703DB /* ErrorView.swift */,
 				9EEA35E02E61B59B00D703DB /* AccountView.swift */,
 			);
 			path = View;
@@ -291,6 +296,7 @@
 			children = (
 				9EEA35E62E61BA6000D703DB /* AccountViewPresentation.swift */,
 				9EEA35E72E61BA6000D703DB /* PaymentDetailsViewPresentation.swift */,
+				9EEA3E5C2E63122000D703DB /* ErrorViewPresentation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -412,8 +418,10 @@
 				9EEA35E12E61B59B00D703DB /* AccountView.swift in Sources */,
 				9EEA35E92E61BA6000D703DB /* AccountViewPresentation.swift in Sources */,
 				9EEA35EA2E61BA6000D703DB /* PaymentDetailsViewPresentation.swift in Sources */,
+				9EEA3E5D2E63122000D703DB /* ErrorViewPresentation.swift in Sources */,
 				9E512AD92A9FBC9500BF40A0 /* ServiceError.swift in Sources */,
 				9EEA3E4F2E624CF400D703DB /* AnimatablePresentation.swift in Sources */,
+				9EEA3E5B2E6311E000D703DB /* ErrorView.swift in Sources */,
 				9E512ADD2A9FBD3900BF40A0 /* PaymentDetails.swift in Sources */,
 				9E512AC02A9FBA6700BF40A0 /* ViewModel.swift in Sources */,
 				9E512AB02A9FB98B00BF40A0 /* SimpleMVVMApp.swift in Sources */,
